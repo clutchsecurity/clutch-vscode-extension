@@ -1,0 +1,36 @@
+{
+  "name": "clutch-scan",
+  "displayName": "Clutch Gitleaks Scan",
+  "description": "A VS Code extension provided by Clutch Security to scan the workspace for secrets using Gitleaks",
+  "version": "0.0.1",
+  "publisher": "clutch-security",
+  "homepage": "https://clutch.security/",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "repository": "https://github.com/clutchsecurity/clutch-vscode-extension",
+  "activationEvents": [
+    "onDidChangeTextDocument",
+    "onDidSaveTextDocument",
+    "onStartupFinished"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "gitleaks-scan.scanForSecrets",
+        "title": "Scan Workspace for Secrets"
+      },
+      {
+        "command": "gitleaks-scan.showSummary",
+        "title": "Show Secrets Summary"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "cd executables; wget https://github.com/gitleaks/gitleaks/releases/download/v8.19.2/gitleaks_8.19.2_darwin_arm64.tar.gz; wget https://github.com/gitleaks/gitleaks/releases/download/v8.19.2/gitleaks_8.19.2_darwin_x64.tar.gz; wget https://github.com/gitleaks/gitleaks/releases/download/v8.19.2/gitleaks_8.19.2_linux_arm64.tar.gz; wget https://github.com/gitleaks/gitleaks/releases/download/v8.19.2/gitleaks_8.19.2_linux_armv6.tar.gz; wget https://github.com/gitleaks/gitleaks/releases/download/v8.19.2/gitleaks_8.19.2_linux_armv7.tar.gz; wget https://github.com/gitleaks/gitleaks/releases/download/v8.19.2/gitleaks_8.19.2_linux_x32.tar.gz; wget https://github.com/gitleaks/gitleaks/releases/download/v8.19.2/gitleaks_8.19.2_linux_x64.tar.gz; wget https://github.com/gitleaks/gitleaks/releases/download/v8.19.2/gitleaks_8.19.2_windows_armv6.zip; wget https://github.com/gitleaks/gitleaks/releases/download/v8.19.2/gitleaks_8.19.2_windows_armv7.zip; wget https://github.com/gitleaks/gitleaks/releases/download/v8.19.2/gitleaks_8.19.2_windows_x32.zip; wget https://github.com/gitleaks/gitleaks/releases/download/v8.19.2/gitleaks_8.19.2_windows_x64.zip; for f in *.tar.gz; do tar xf \"$f\";mv gitleaks $(basename \"$f\" .tar.gz); done; for f in *.zip; do tar xf \"$f\";mv gitleaks.exe $(basename \"$f\" .zip).exe; done; echo 'Ready to package!'"
+  }
+}
