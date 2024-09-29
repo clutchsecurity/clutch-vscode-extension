@@ -1,3 +1,18 @@
+<p align="center">
+  <img alt="Clutch Logo" src="https://github.com/user-attachments/assets/f80db7ba-29fc-4061-bfca-53df4b65b7cf" />
+  <h2 align="center">Clutch VS Code Secrets Scanning Extention</h2>
+  <p align="center">Scan your workspace for secrets!</p>
+</p>
+
+---
+
+<div align="center">
+
+[![License](https://img.shields.io/badge/license-MIT-brightgreen)](/LICENSE)
+
+</div>
+
+---
 ## Clutch Gitleaks VS code extension
 
 ### Installation
