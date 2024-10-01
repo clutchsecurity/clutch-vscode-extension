@@ -36,7 +36,7 @@ code --uninstall-extension clutch-scan-0.0.1.vsix
 ---
 
 Visual Studio Code Extension is licensed under MIT License
-Copyright (C) Clutch Security Ltd.
+Copyright (C) Clutch Security Ltd. (all rights reserved)
 
 Source code is available at: [Source Code](/src)
 
