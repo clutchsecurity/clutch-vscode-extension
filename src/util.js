@@ -2,8 +2,22 @@ const vscode = require('vscode');
 const { exec } = require('child_process');
 const { DiagnosticCollection, DiagnosticsMap } = require('./diagnostics');
 const path = require('path');
+const fs = require('fs');
 
 let FindingsSummary = new Set();
+
+function getExecutablePath(executablePrefix) {
+    const execInExecutables = path.join(`${__dirname}/../executables`, executablePrefix);
+    const execInParent = path.join(`${__dirname}/../`, executablePrefix);
+
+    if (fs.existsSync(execInExecutables)) {
+        return execInExecutables;
+    } else if (fs.existsSync(execInParent)) {
+        return execInParent;
+    }
+
+    throw new Error(`Executable ${executablePrefix} not found in either location`);
+}
 
 function getExecutablePrefix() {
     let platform = process.platform;
@@ -47,8 +61,7 @@ function RunGitleaksScan(workspacePath, isWorkspaceScan = false) {
         }
 
         const executablePrefix = getExecutablePrefix();
-        const executablePath = path.join(`${__dirname}/../executables`, executablePrefix);
-
+        const executablePath = getExecutablePath(executablePrefix);
         const command = `${executablePath} detect --log-level error --source ${workspacePath} --no-color --no-banner -v --no-git`;
 
         exec(command, (err, stdout, stderr) => {
