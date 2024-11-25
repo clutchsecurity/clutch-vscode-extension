@@ -77,14 +77,6 @@ function UpdateSummary(subscriptions) {
                 refreshsummaryPanel();
             }
         });
-        
-        // // Future fix. Summary page not detecting this change to refresh the panel and data.
-        // // For some reason, this isn't working. Debug later.
-        // vscode.workspace.onDidDeleteFiles(e => {
-        //     console.error('running on delete thing');
-        //     RunGitleaksScan(workspaceFolder, true);
-        //     refreshsummaryPanel();
-        // });
     }
 }
 
