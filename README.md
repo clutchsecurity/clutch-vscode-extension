@@ -1,8 +1,13 @@
 <p align="center">
-  <img alt="Clutch Logo" src="https://github.com/user-attachments/assets/f80db7ba-29fc-4061-bfca-53df4b65b7cf" />
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/ca4f0353-8180-425e-8bf7-76835e1d6322">
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/0b342783-2c98-451e-a09f-4612cad8d03a">
+    <img alt="Clutch Security" src="https://github.com/user-attachments/assets/0b342783-2c98-451e-a09f-4612cad8d03a">
+  </picture>
   <h2 align="center">Clutch VS Code Secrets Scanning Extention</h2>
   <p align="center">Scan your workspace for secrets!</p>
 </p>
+
 
 ---
 
