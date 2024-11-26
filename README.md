@@ -30,8 +30,8 @@ vsce package
 ```
 
 ```
-code --install-extension clutch-scan-0.0.1.vsix
-code --uninstall-extension clutch-scan-0.0.1.vsix
+code --install-extension clutch-gitleaks-secrets-scanner-0.0.1.vsix
+code --uninstall-extension clutch-gitleaks-secrets-scanner-0.0.1.vsix
 ```
 
 ### Demo GIF
