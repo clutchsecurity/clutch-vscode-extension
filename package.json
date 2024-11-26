@@ -1,9 +1,10 @@
 {
-  "name": "clutch-scan",
-  "displayName": "Clutch Gitleaks Scan",
+  "name": "clutch-gitleaks-secrets-scanner",
+  "displayName": "Clutch Gitleaks Secrets Scanner",
   "description": "A VS Code extension provided by Clutch Security to scan the workspace for secrets using Gitleaks",
   "version": "0.0.1",
-  "publisher": "clutch-security",
+  "publisher": "ClutchSecurity",
+  "icon": "icon.png",
   "homepage": "https://clutch.security/",
   "engines": {
     "vscode": "^1.74.0"
