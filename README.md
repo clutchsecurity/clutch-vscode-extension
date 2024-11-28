@@ -34,6 +34,8 @@ code --install-extension clutch-gitleaks-secrets-scanner-0.0.1.vsix
 code --uninstall-extension clutch-gitleaks-secrets-scanner-0.0.1.vsix
 ```
 
+For installing directly from the marketplace [click here](https://marketplace.visualstudio.com/items?itemName=ClutchSecurity.clutch-gitleaks-secrets-scanner)
+
 ### Demo GIF
 
 ![Clutch Extention Demo](https://github.com/user-attachments/assets/19e502b2-c1d6-4f06-bc08-d187a38db82a)
