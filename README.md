@@ -30,8 +30,8 @@ vsce package
 ```
 
 ```
-code --install-extension clutch-gitleaks-secrets-scanner-0.0.1.vsix
-code --uninstall-extension clutch-gitleaks-secrets-scanner-0.0.1.vsix
+code --install-extension clutch-gitleaks-secrets-scanner-0.0.2.vsix
+code --uninstall-extension clutch-gitleaks-secrets-scanner-0.0.2.vsix
 ```
 
 For installing directly from the marketplace [click here](https://marketplace.visualstudio.com/items?itemName=ClutchSecurity.clutch-gitleaks-secrets-scanner)

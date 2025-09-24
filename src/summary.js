@@ -1,12 +1,21 @@
 const { FindingsSummary } = require('./util');
 
+function escapeHtml(unsafe) {
+    return unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
 function GetSecretsSummaryHtml() {
     const rows = Array.from(FindingsSummary).map(secret => `
         <tr>
-            <td>${secret.file}</td>
+            <td>${escapeHtml(secret.file)}</td>
             <td>${secret.line + 1}</td>
-            <td>${secret.secret}</td>
-            <td>${secret.ruleID}</td>
+            <td>${escapeHtml(secret.secret)}</td>
+            <td>${escapeHtml(secret.ruleID)}</td>
         </tr>
     `).join('');
 
